@@ -15,16 +15,18 @@ public class Servidor {
 	@GET //tipo de petición HTTP
 	@Produces(MediaType.TEXT_PLAIN) //tipo de texto devuelto
 	@Path("pedirTiempo") //ruta al método
-	public String pedirTiempo() throws InterruptedException //el método debe retornar String
+	public String pedirTiempo() //el método debe retornar String
 	{
 		t1=tiempo();
-		TimeUnit.SECONDS.sleep( (long) (1 + Math.random()*3));
+		try {
+			TimeUnit.SECONDS.sleep( (long) (1 + Math.random()*3));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		t2=tiempo();
 		return (t1+":"+t2);
-	}
-
-	
-	
+	}	
 	
 	public long tiempo() //el método debe retornar String
 	{

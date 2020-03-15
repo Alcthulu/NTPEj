@@ -12,7 +12,7 @@ public class Cliente {
 	
 	public static void main(String[] args) throws IOException {
 
-		String dir[] = {"192.168.0.69:8080","192.168.0.69:8080"};
+		String dir[] = {"192.168.0.69:8080","192.168.0.8:8080"};
 
 		for (String ip : dir) {	
 			double mejorPar[]= {Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY};//el 1 es offset y el 0 delay
@@ -47,8 +47,9 @@ public class Cliente {
 					
 					double offset = (t1-t0+t2-t3)/2;
 					double delay = t1-t0+t3-t2;
+					double thispar[] = {delay, offset};
 					
-					if( delay < mejorPar[0]) mejorPar[0] = delay;
+					if( delay < mejorPar[0]) mejorPar=thispar;
 				 
 				}
 			}
