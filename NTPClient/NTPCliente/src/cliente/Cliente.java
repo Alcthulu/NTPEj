@@ -54,7 +54,7 @@ public class Cliente {
 				}
 			}
 			
-			System.out.println("Para la máquina con ip ("+ip+"):\n\n\tEl offset es --> "+mejorPar[1]+"\n\n\tEl delay es -->"+mejorPar[0]+"\n\n");
+			System.out.println("Para la máquina con ip ("+ip+"):\n\n\tEl offset es --> "+mejorPar[1]+"\n\n\tEl delay es --> "+mejorPar[0]+"\n\n");
 		}
 		System.out.println("Para esta máquina:\n\n\tEl offset es --> 0\n\n\tEl delay es -->0\n\n");
 	}
